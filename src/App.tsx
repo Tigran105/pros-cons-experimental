@@ -1,11 +1,21 @@
 import React from 'react';
-import {useSelector} from "react-redux";
+import {useTypedSelector} from "./hooks/useTypedSelector";
+import List from "./components/List";
+import ConsItem from "./components/ConsItem";
+import ProsItem from "./components/ProsItem";
 
 function App() {
-    console.log(useSelector(state => state))
+    const {cons, pros} = useTypedSelector(state => state.prosAndCons)
     return (
-        <div className="App">
-            hello
+        <div style={{display: "flex"}}>
+            <List
+                items={cons}
+                renderItem={item => <ConsItem item={item} key={item.id.toString()}/>}
+            />
+            <List
+                items={pros}
+                renderItem={item => <ProsItem item={item} key={item.id.toString()}/>}
+            />
         </div>
     );
 }
