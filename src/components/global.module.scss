@@ -1,0 +1,16 @@
+.allItems {
+  //display: flex;
+  background: aqua;
+  .item {
+    padding: 15px;
+    //background: aqua;
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+
+    & > div {
+      margin-left: 5px;
+    }
+  }
+
+}

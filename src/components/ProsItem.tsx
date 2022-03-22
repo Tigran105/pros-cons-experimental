@@ -2,12 +2,15 @@ import React from 'react';
 import {useDispatch} from "react-redux";
 import {changePros} from "../store/action-creators/prosCros";
 import {ProsAndCons} from "../types/prosAndCons";
+import itemStyle from "./global.module.scss"
+import {TextField} from "@mui/material";
 
-interface consItemProps {
+interface prosItemProps {
     item: ProsAndCons,
+    index:number
 }
 
-const ProsItem = (props: consItemProps) => {
+const ProsItem = (props: prosItemProps) => {
     const dispatch = useDispatch()
 
     const itemChanger = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -15,9 +18,15 @@ const ProsItem = (props: consItemProps) => {
     }
 
     return (
-        <div>
-            {props.item.id} -
-            <input type="text" defaultValue={props.item.name} onChange={itemChanger}/>
+        <div className={itemStyle.item}>
+            {props.index} -
+            <TextField type="text"
+                       defaultValue={props.item.name}
+                       onChange={itemChanger}
+                       size={"small"}
+                       label={"PROS"}
+                       color={"secondary"}
+            />
         </div>
     );
 };

@@ -2,12 +2,10 @@ import {ProsConsActions, prosConsActiontypes, ProsConsState} from "../../types/p
 
 const initialState: ProsConsState = {
     pros: [
-        {id: 1, name: "1 input pros"},
-        {id: 2, name: ""},
+        {id: 1, name: ""},
     ],
     cons: [
-        {id: 1, name: "1 input cons"},
-        {id: 2, name: ""},
+        {id: 1, name: ""},
     ]
 }
 
