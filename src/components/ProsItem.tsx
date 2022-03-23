@@ -24,7 +24,7 @@ const ProsItem = (props: prosItemProps) => {
                        defaultValue={props.item.name}
                        onChange={itemChanger}
                        size={"small"}
-                       label={"PROS"}
+                       label={`PROS ${props.index}`}
                        color={"secondary"}
             />
         </div>

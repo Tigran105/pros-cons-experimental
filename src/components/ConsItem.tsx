@@ -24,7 +24,7 @@ const ConsItem = (props: consItemProps) => {
                        defaultValue={props.item.name}
                        onChange={itemChanger}
                        size={"small"}
-                       label={"CONS"}
+                       label={`CONS ${props.index}`}
                        color={"secondary"}
             />
 
